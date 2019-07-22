@@ -101,11 +101,11 @@ class UFO extends Invader {
       }
 
     // tests for borders
-    if (this.position.x > GAME_WIDTH) {
+    if (this.position.y >= 0 && this.position.x > GAME_WIDTH) {
       this.beam.active = false;
       this.dead = true;
     }
-    if (this.position.x < 0) {
+    if (this.position.y >= 0 && this.position.x < 0) {
       this.beam.active = false;
       this.dead = true;
     }
