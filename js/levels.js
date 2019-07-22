@@ -58,8 +58,8 @@ function level3() {
       type = 'invader' + a;
       enemies.push(new Copycat(type, 50, 50, posX, posY, 5));
     }
-    else if (i % 8 == 0 && i != 0) {
-      enemies.push(new UFO('ufo', 60, 30, posX, posY - (100*i), 8));
+    else if (i % 6 == 0 && i != 0) {
+      enemies.push(new UFO('ufo', 60, 30, posX, posY - (300*i), 8));
     }
     else {
       a = '' + (Math.floor(Math.random() * 3) + 1);

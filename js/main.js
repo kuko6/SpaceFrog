@@ -58,8 +58,10 @@ window.onload = function() {
         enemies[i].update();
         enemies[i].draw();
 
-        if (enemies[i].dead)
+        if (enemies[i].dead) {
           enemies.splice(i, 1);
+          console.log(('' + enemies.length) + " enemies left.");
+        }
 
         // cleans up the scene when player dies
         if (player.lives == 0)
@@ -130,6 +132,7 @@ window.onload = function() {
     if (level > 3) {
       scene = new Win();
       scene.draw();
+      music.pause();
 
       if (pressedKeys.escape) {
         scene = new Menu();
